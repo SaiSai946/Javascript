@@ -28,9 +28,8 @@ function verifier(nombre) {
 
     } else {
 
-        instruction.textContent = "#" + coups +  " (" + nombre + ")" + " Félicitation vous avez trouver le juste prix !";
-        instruction.className = 'instruction fini';
-        input.disabled = true;
+        instruction.textContent = "#" + coups +  "(" + nombre + ")" + " Félicitation vous avez trouver le juste prix !";
+        instruction.className += 'instruction fini';
 
     }
 
