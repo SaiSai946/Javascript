@@ -18,22 +18,23 @@ function verifier(nombre) {
 
     if(nombre < nombreAleatoire) {
 
-        instruction.textContent = "#" + coups + "(" + nombre + ")"+ " C'est plus !";
-         instruction.className += 'instruction plus';
+        instruction.textContent = "#" + coups + " (" + nombre + ")"+ " C'est plus !";
+         instruction.className = 'instruction plus';
 
     }else if (nombre > nombreAleatoire) {
 
-        instruction.textContent = "#" + coups + "(" + nombre + ")" + " C'est moins !";
-        instruction.className += 'instruction moins';
+        instruction.textContent = "#" + coups + " (" + nombre + ")" + " C'est moins !";
+        instruction.className = 'instruction moins';
 
     } else {
 
-        instruction.textContent = "#" + coups +  "(" + nombre + ")" + " Félicitation vous avez trouver le juste prix !";
-        instruction.className += 'instruction fini';
+        instruction.textContent = "#" + coups +  " (" + nombre + ")" + " Félicitation vous avez trouver le juste prix !";
+        instruction.className = 'instruction fini';
+        input.disabled = true;
 
     }
 
-    document.querySelector('#instruction').prepend(instruction);
+    document.querySelector('#instructions').prepend(instruction);
 }
 
 // Etape 4 - Vérifier que l'utilisateur donne bien un nombre
